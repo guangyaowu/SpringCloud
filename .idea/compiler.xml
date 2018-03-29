@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="Consumer_1" />
+        <module name="Consumer_2" />
+        <module name="Eureka" />
+        <module name="Producer_1" />
+        <module name="Producer_2" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Consumer_1" target="1.8" />
+      <module name="Consumer_2" target="1.8" />
+      <module name="Eureka" target="1.8" />
+      <module name="Producer_1" target="1.8" />
+      <module name="Producer_2" target="1.8" />
+      <module name="SpringCloud" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
