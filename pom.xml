@@ -11,10 +11,10 @@
 
     <modules>
         <module>Eureka</module>
-        <module>Consumer_1</module>
-        <module>Consumer_2</module>
-        <module>Producer_1</module>
-        <module>Producer_2</module>
+        <module>Server_1</module>
+        <module>Server_2</module>
+        <module>Server_3</module>
+        <module>Server_4</module>
     </modules>
 
     <parent>
