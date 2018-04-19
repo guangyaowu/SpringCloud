@@ -15,6 +15,7 @@
         <module>Server_2</module>
         <module>Server_3</module>
         <module>Server_4</module>
+        <module>Server_ribbon</module>
     </modules>
 
     <parent>
