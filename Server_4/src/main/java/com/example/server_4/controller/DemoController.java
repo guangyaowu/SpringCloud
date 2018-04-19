@@ -1,4 +1,4 @@
-package com.example.server_3.controller;
+package com.example.server_4.controller;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -12,6 +12,6 @@ public class DemoController {
     String port;
     @RequestMapping("/hi")
     public String home(@RequestParam String name) {
-        return "hi "+name+",i am Server-333 from port:" +port;
+        return "hi "+name+",i am Server-444 from port:" +port;
     }
 }
