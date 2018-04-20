@@ -6,6 +6,6 @@ import org.springframework.stereotype.Component;
 public class HiServiceHystric implements HiService {
     @Override
     public String sayHiFromClientOne(String name) {
-        return "sorry "+ name +" !!!!!!";
+        return "sorry "+ name +" !!!!!!---from Feign :>>>>";
     }
 }

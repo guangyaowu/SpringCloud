@@ -17,6 +17,7 @@
         <module>Server_4</module>
         <module>Server_ribbon</module>
         <module>Server_feign</module>
+        <module>Server_zuul</module>
     </modules>
 
     <parent>
