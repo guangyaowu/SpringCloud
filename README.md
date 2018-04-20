@@ -6,7 +6,7 @@ spring cloud 为开发人员提供了快速构建分布式系统的一些工具�
 它运行环境简单，可以在开发人员的电脑上跑。
 另外说明spring cloud是基于springboot的
 
-Ribbon + RestTemplate
+<h2>Ribbon + RestTemplate</h2>
 
 在微服务架构中，业务都会被拆分成一个独立的服务，服务与服务的通讯是基于http restful的。
 Spring cloud有两种服务调用方式，一种是ribbon+restTemplate，另一种是feign。
@@ -21,7 +21,7 @@ ServerListFilter ribbonServerListFilter: ZonePreferenceServerListFilter<br>
 ILoadBalancer ribbonLoadBalancer: ZoneAwareLoadBalancer
 
 
-Feign
+<h2>Feign</h2>
 
 Feign是一个声明式的伪Http客户端，它使得写Http客户端变得更简单。<br>
 使用Feign，只需要创建一个接口并注解。它具有可插拔的注解特性，可使用Feign 注解和JAX-RS注解。<br>
@@ -32,7 +32,7 @@ Feign 采用的是基于接口的注解<br>
 Feign 整合了ribbon<br>
 
 
-Hystrix 断路器
+<h2>Hystrix 断路器</h2>
 
 在微服务架构中，根据业务来拆分成一个个的服务，服务与服务之间可以相互调用（RPC），<br>
 在Spring Cloud可以用RestTemplate+Ribbon和Feign来调用。<br>
