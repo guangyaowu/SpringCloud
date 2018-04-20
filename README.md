@@ -6,6 +6,14 @@ spring cloud 为开发人员提供了快速构建分布式系统的一些工具�
 它运行环境简单，可以在开发人员的电脑上跑。
 另外说明spring cloud是基于springboot的
 
+在微服务架构中，需要几个基础的服务治理组件，包括服务注册与发现、服务消费、负载均衡、断路器、智能路由、配置管理等，由这几个基础组件相互协作，共同组建了一个简单的微服务系统。<br>
+一个简答的微服务系统如下图：<br>
+![Image text](https://github.com/guangyaowu/SpringCloud/blob/master/img-storage/Azure.png)<br>
+注意：A服务和B服务是可以相互调用的，作图的时候忘记了。并且配置服务也是注册到服务注册中心的。
+
+在Spring Cloud微服务系统中，一种常见的负载均衡方式是，客户端的请求首先经过负载均衡（zuul、Ngnix），再到达服务网关（zuul集群），然后再到具体的服。，服务统一注册到高可用的服务注册中心集群，服务的所有的配置文件由配置服务管理（下一篇文章讲述），配置服务的配置文件放在git仓库，方便开发人员随时改配置。
+
+
 <h2>Ribbon + RestTemplate</h2>
 
 在微服务架构中，业务都会被拆分成一个独立的服务，服务与服务的通讯是基于http restful的。
@@ -32,7 +40,7 @@ Feign 采用的是基于接口的注解<br>
 Feign 整合了ribbon<br>
 
 
-<h2>Hystrix 断路器</h2>
+<h2>Hystrix</h2>
 
 在微服务架构中，根据业务来拆分成一个个的服务，服务与服务之间可以相互调用（RPC），<br>
 在Spring Cloud可以用RestTemplate+Ribbon和Feign来调用。<br>
@@ -47,4 +55,20 @@ Netflix开源了Hystrix组件，实现了断路器模式，SpringCloud对这一�
 较底层的服务如果出现故障，会导致连锁故障。当对特定的服务的调用的不可用达到一个阀值（Hystric 是5秒20次） 断路器将会被打开。<br>
 ![Image text](https://github.com/guangyaowu/SpringCloud/blob/master/img-storage/HystrixFallback.png)<br>
 断路打开后，可用避免连锁故障，fallback方法可以直接返回一个固定值。
+
+
+<h2>Zuul</h2>
+
+Zuul的主要功能是路由转发和过滤器。路由功能是微服务的一部分，比如／api/user转发到到user服务，/api/shop转发到到shop服务。zuul默认和Ribbon结合实现了负载均衡的功能。
+zuul有以下功能：<br>
+Authentication<br>
+Insights<br>
+Stress Testing<br>
+Canary Testing<br>
+Dynamic Routing<br>
+Service Migration<br>
+Load Shedding<br>
+Security<br>
+Static Response handling<br>
+Active/Active traffic management<br>
 
