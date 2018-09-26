@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: Eureka
+server:
+  port: 8082
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka
+  server:
+    responseCacheAutoExpirationInSeconds: 180
+    eviction-interval-timer-in-ms: 3000
