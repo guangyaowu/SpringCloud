@@ -14,6 +14,6 @@ import org.springframework.stereotype.Component;
 public class DemoListenerB implements ApplicationListener<DemoEvent> {
     @Override
     public void onApplicationEvent(DemoEvent event) {
-        log.info("处理者B处理事件 ：" + event.getEventContent());
+        log.error("处理者B处理事件 ：" + event.getEventContent());
     }
 }
